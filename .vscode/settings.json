@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "stdexcept": "cpp",
+    "stack": "cpp",
+    "iostream": "cpp",
+    "cmath": "cpp"
+  }
+}
