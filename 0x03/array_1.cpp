@@ -3,22 +3,17 @@ using namespace std;
 
 void insert(int idx, int num, int arr[], int &len)
 {
-    int arr2[len];
-    for (int i = 0; i < idx; i++)
-    {
-        arr2[i] = arr[i];
-    }
-
-    arr2[idx] = num;
-
-    for (int i = idx + 1; i < len; i++)
-    {
-        arr2[i] = arr[i];
-    }
+    for (int i = len; i > idx; i--)
+        arr[i] = arr[i - 1];
+    arr[idx] = num;
+    len++;
 }
 
 void erase(int idx, int arr[], int &len)
 {
+    len--;
+    for (int i = idx; i < len; i++)
+        arr[i] = arr[i + 1];
 }
 
 void printArr(int arr[], int &len)
